@@ -14,14 +14,11 @@ jQuery(document).ready(
             $("#subForm").attr("action", "lvfeimanager/export");
             $("#subForm").submit();
         })
-        $('#startT').datepicker({
-            autoclose:true,
-            format: "yyyy-mm-dd",
-            language: 'zh-CN'
-        })
-        $('#endT').datepicker({
-            autoclose:true,
-            format: "yyyy-mm-dd",
-            language: 'zh-CN'
-        })
+
+        var datepickerOpt = {
+            format: 'YYYY-MM-DD',
+            showTodayButton: true
+        }
+        $('#startT').datetimepicker(datepickerOpt);
+        $('#endT').datetimepicker(datepickerOpt);
     });

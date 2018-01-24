@@ -14,7 +14,7 @@
 <title>首页</title>
 <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" />
 <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-theme.css" />
-<link rel="stylesheet" href="assets/datepicker/css/bootstrap-datepicker3.css" />
+<link rel="stylesheet" href="assets/deatetimepicker/bootstrap-datetimepicker.css" />
 <link rel="stylesheet" href="assets/css/index.css" />
 </head>
 <body>
@@ -75,8 +75,8 @@
 <script type="text/javascript" src="assets/bootstrap/js/bootstrap.js"></script>
 <script type="text/javascript" src="assets/layer/layer.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
-<script type="text/javascript" src="assets/datepicker/js/bootstrap-datepicker.js"></script>
-<script type="text/javascript" src="assets/datepicker/bootstrap-datepicker.zh-CN.min.js"></script>
+<script type="text/javascript" src="assets/deatetimepicker/moment.js"></script>
+<script type="text/javascript" src="assets/deatetimepicker/bootstrap-datetimepicker.min.js"></script>
 <script type="text/javascript" src="assets/js/houtaimanager/index.js"></script>
 <script type="text/javascript" src="assets/js/ajaxsessiontimeout.js"></script>
 </html>

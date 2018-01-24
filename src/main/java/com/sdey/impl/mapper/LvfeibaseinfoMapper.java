@@ -3,6 +3,7 @@ package com.sdey.impl.mapper;
 import com.github.pagehelper.Page;
 import com.sdey.api.po.Lvfeibaseinfo;
 import com.sdey.api.vo.LvfeibaseinfoExport;
+import com.sdey.api.vo.SearchInfo;
 
 public interface LvfeibaseinfoMapper {
 
@@ -44,7 +45,7 @@ public interface LvfeibaseinfoMapper {
 
 	Page<Lvfeibaseinfo> getDataList();
 
-	Page<Lvfeibaseinfo> search(Lvfeibaseinfo searchInfo);
+	Page<Lvfeibaseinfo> search(SearchInfo searchInfo);
 
-	Page<LvfeibaseinfoExport> searchForExport(Lvfeibaseinfo searchInfo);
+	Page<LvfeibaseinfoExport> searchForExport(SearchInfo searchInfo);
 }

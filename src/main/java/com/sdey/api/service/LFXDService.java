@@ -5,6 +5,7 @@ import com.sdey.api.po.Lvfeibaseinfo;
 import com.sdey.api.po.Lvfeimanager;
 import com.sdey.api.vo.LvfeibaseinfoExport;
 import com.sdey.api.vo.PageParam;
+import com.sdey.api.vo.SearchInfo;
 import com.sdey.api.vo.UpdatePSDVO;
 
 public interface LFXDService {
@@ -15,9 +16,9 @@ public interface LFXDService {
 
 	Lvfeibaseinfo getDataById(Integer id);
 
-	Page<Lvfeibaseinfo> search(Lvfeibaseinfo searchInfo, PageParam pageParam);
+	Page<Lvfeibaseinfo> search(SearchInfo searchInfo, PageParam pageParam);
 
-	Page<LvfeibaseinfoExport> searchForExport(Lvfeibaseinfo searchInfo, PageParam pageParam);
+	Page<LvfeibaseinfoExport> searchForExport(SearchInfo searchInfo, PageParam pageParam);
 
 	Lvfeimanager login(Lvfeimanager manager);
 

@@ -8,4 +8,6 @@ jQuery(document).ready(function() {
 		jumpPage(pageUrl, $("#neirong"));
 		return false;
 	});
+
+	$("#firstAc").click();
 });

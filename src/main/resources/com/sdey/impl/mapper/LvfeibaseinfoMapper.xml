@@ -540,7 +540,7 @@
 		<include refid="Base_Column_List" />
 		from lvfeibaseinfo order by createTime desc
 	</select>
-	<select id="search" resultMap="BaseResultMap" parameterType="com.sdey.api.po.Lvfeibaseinfo">
+	<select id="search" resultMap="BaseResultMap" parameterType="com.sdey.api.vo.SearchInfo">
 		select
 		<include refid="Base_Column_List" />
 		from lvfeibaseinfo
@@ -550,6 +550,9 @@
 			</if>
 			<if test="phone!= null and phone!= '' ">
 				AND phone = #{phone}
+			</if>
+			<if test="start!= null and end!= null ">
+				AND createTime BETWEEN #{start} and #{end}
 			</if>
 		</where>
 		order by createTime desc
@@ -598,7 +601,7 @@
 		<result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
 	</resultMap>
 	<select id="searchForExport" resultMap="BaseResultMapExport"
-		parameterType="com.sdey.api.po.Lvfeibaseinfo">
+		parameterType="com.sdey.api.vo.SearchInfo">
 		select
 		<include refid="Base_Column_List" />
 		from lvfeibaseinfo
@@ -608,6 +611,9 @@
 			</if>
 			<if test="phone!= null and phone!= '' ">
 				AND phone = #{phone}
+			</if>
+			<if test="start!= null and end!= null ">
+				AND createTime BETWEEN #{start} and #{end}
 			</if>
 		</where>
 		order by createTime desc

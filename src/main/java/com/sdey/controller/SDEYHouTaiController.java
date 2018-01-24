@@ -6,6 +6,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.sdey.api.vo.SearchInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -58,14 +59,14 @@ public class SDEYHouTaiController {
 	 * @return
 	 */
 	@RequestMapping(value = "/search")
-	public String search(Lvfeibaseinfo searchInfo, PageParam pageParam, HttpServletRequest request) {
+	public String search(SearchInfo searchInfo, PageParam pageParam, HttpServletRequest request) {
 		Page<Lvfeibaseinfo> page = LFXDService.search(searchInfo, pageParam);
 		request.setAttribute("page", page.toPageInfo());
 		return "/lvfeimanager/dataDisList.jsp";
 	}
 
 	@RequestMapping("/export")
-	public ModelAndView export(Lvfeibaseinfo searchInfo, PageParam pageParam, ModelMap model,
+	public ModelAndView export(SearchInfo searchInfo, PageParam pageParam, ModelMap model,
 			HttpServletRequest request) {
 		pageParam.setPageNum(0);
 		pageParam.setPageSize(0);

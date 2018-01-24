@@ -92,7 +92,7 @@ public class SDEYController {
 
 	@RequestMapping(value = "/jumpPage")
 	public String jumpPage(String pageUrl) {
-		System.out.println(pageUrl);
+		//System.out.println(pageUrl);
 		return pageUrl;
 	}
 }

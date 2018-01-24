@@ -1,5 +1,6 @@
 package com.sdey.impl.service;
 
+import com.sdey.api.vo.SearchInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -38,13 +39,13 @@ public class LFXDServiceImpl implements LFXDService {
 	}
 
 	@Override
-	public Page<Lvfeibaseinfo> search(Lvfeibaseinfo searchInfo, PageParam pageParam) {
+	public Page<Lvfeibaseinfo> search(SearchInfo searchInfo, PageParam pageParam) {
 		PageHelper.startPage(pageParam.getPageNum(), pageParam.getPageSize(), true);
 		return lvfeibaseinfoDao.search(searchInfo);
 	}
 
 	@Override
-	public Page<LvfeibaseinfoExport> searchForExport(Lvfeibaseinfo searchInfo, PageParam pageParam) {
+	public Page<LvfeibaseinfoExport> searchForExport(SearchInfo searchInfo, PageParam pageParam) {
 		PageHelper.startPage(pageParam.getPageNum(), pageParam.getPageSize(), true);
 		return lvfeibaseinfoDao.searchForExport(searchInfo);
 	}

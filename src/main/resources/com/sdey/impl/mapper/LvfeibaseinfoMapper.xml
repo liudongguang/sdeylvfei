@@ -618,4 +618,10 @@
 		</where>
 		order by createTime desc
 	</select>
+	<delete id="deleteRowsByIds" parameterType="list">
+		DELETE from lvfeibaseinfo where uid in
+		<foreach collection="list" item="item" open="(" separator="," close=")">
+			#{item}
+		</foreach>
+	</delete>
 </mapper>

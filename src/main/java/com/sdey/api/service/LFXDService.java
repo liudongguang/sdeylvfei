@@ -27,4 +27,5 @@ public interface LFXDService {
 	int selectBypsd(UpdatePSDVO upd);
 
 
+    int deleteRowsByIds(String delIDS);
 }

@@ -29,10 +29,11 @@
             <button id="exportBTID" type="button" class="btn btn-default">导出</button>
         </div>
     </form>
-
+    <button id="deleteBTID" type="button" class="btn btn-default">删除</button>
     <table class="table  table-bordered">
         <thead>
         <tr>
+            <th><input id="selectAllCK" type="checkbox"/></th>
             <th>姓名</th>
             <th>手机号</th>
             <th>居住地</th>
@@ -44,6 +45,7 @@
         <tbody>
         <c:forEach items="${page.list}" var="l">
             <tr>
+                <td><input type="checkbox" value="${l.uid}"/></td>
                 <td>${l.username}</td>
                 <td>${l.phone}</td>
                 <td>${l.homeaddressDisplay}</td>

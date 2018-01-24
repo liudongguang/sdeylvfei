@@ -15,6 +15,10 @@ import com.sdey.api.vo.UpdatePSDVO;
 import com.sdey.impl.mapper.LvfeibaseinfoMapper;
 import com.sdey.impl.mapper.LvfeimanagerMapper;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 public class LFXDServiceImpl implements LFXDService {
 	@Autowired
@@ -65,4 +69,11 @@ public class LFXDServiceImpl implements LFXDService {
 		return lvfeimanagerDao.selectBypsd(upd);
 	}
 
+	@Override
+	public int deleteRowsByIds(String delIDS) {
+		List<Integer> collect = Arrays.asList(delIDS.split(",")).stream().map(item -> {
+			return Integer.valueOf(item);
+		}).collect(Collectors.toList());
+		return lvfeibaseinfoDao.deleteRowsByIds(collect);
+	}
 }

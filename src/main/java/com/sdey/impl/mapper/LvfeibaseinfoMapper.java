@@ -5,6 +5,8 @@ import com.sdey.api.po.Lvfeibaseinfo;
 import com.sdey.api.vo.LvfeibaseinfoExport;
 import com.sdey.api.vo.SearchInfo;
 
+import java.util.List;
+
 public interface LvfeibaseinfoMapper {
 
 	/**
@@ -48,4 +50,6 @@ public interface LvfeibaseinfoMapper {
 	Page<Lvfeibaseinfo> search(SearchInfo searchInfo);
 
 	Page<LvfeibaseinfoExport> searchForExport(SearchInfo searchInfo);
+
+	int deleteRowsByIds(List<Integer> collect);
 }

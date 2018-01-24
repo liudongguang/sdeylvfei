@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.github.pagehelper.Page;
@@ -105,4 +106,9 @@ public class SDEYHouTaiController {
 		return "/lvfeimanager/psdupdate.jsp";
 	}
 
+	@RequestMapping(value = "/deleteRowsByIds")
+	public String deleteRowsByIds(HttpServletRequest request,String delIDS,String formp) {
+		int delNum=LFXDService.deleteRowsByIds(delIDS);
+		return "/lvfeimanager/search?"+formp;
+	}
 }
